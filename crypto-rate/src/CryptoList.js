@@ -10,9 +10,9 @@ function CryptoList(props) {
         return (
             <li key={cryptoObj.currency}>
                 <span className="CryptoLabel">Last rate:</span>
-                <span className="CryptoRate green">{cryptoObj.lastRate} &uarr;</span>
+                <span className={`CryptoRate ${cryptoObj.cssClass}`}>{cryptoObj.lastRate} {cryptoObj.htmlArray}</span>
                 <span className="CurrencyTicker">{cryptoObj.currency}</span>
-                <span className="CurrencySymbol">[{cryptoObj.symbol}]</span>
+                {/* <span className="CurrencySymbol">[{cryptoObj.symbol}]</span> */}
             </li>
         );
     });
@@ -27,5 +27,3 @@ function CryptoList(props) {
 }
 
 export default CryptoList;
-
-// 54.20
